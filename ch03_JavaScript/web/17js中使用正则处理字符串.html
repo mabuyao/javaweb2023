@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17js中使用正则处理字符串</title>
+    <script>
+        /* 验证 */
+        // 创建一个最简单的正则表达式对象
+        var reg = /o/;
+        // 创建一个字符串对象作为目标字符串
+        var str = 'Hello World!';
+        // 调用正则表达式对象的test()方法验证目标字符串是否满足我们指定的这个模式，返回结果true
+        console.log("/o/.test('Hello World!')="+reg.test(str)); //是否包含字母o
+
+        /* 匹配 g 为全局的意思 */
+        // 创建一个最简单的正则表达式对象
+        var reg = /o/g;
+        // 创建一个字符串对象作为目标字符串
+        var str = 'Hello World!';
+        // 在目标字符串中查找匹配的字符，返回匹配结果组成的数组
+        var resultArr = str.match(reg);
+        // 数组长度为2 (不加g的话只返回第一个匹配到的结果，数组长度就是1)
+        console.log("resultArr.length="+resultArr.length);
+        // 数组内容是o
+        console.log("resultArr[0]="+resultArr[0]);
+
+        /* 替换 */
+        // 创建一个最简单的正则表达式对象
+        var reg = /o/;  //加g表示全局，不然只有第一个，加i表示不区分大小写
+        // 创建一个字符串对象作为目标字符串
+        var str = 'Hello World!';
+        var newStr = str.replace(reg,'@');
+        // 只有第一个o被替换了，说明我们这个正则表达式只能匹配第一个满足的字符串
+        console.log("str.replace(reg)="+newStr);//Hell@ World!
+
+        // 原字符串并没有变化，只是返回了一个新字符串
+        console.log("str="+str);//str=Hello World!
+
+        var str1 = 'Java love me'
+        var str2 = 'I love java'
+
+        var reg1 = /^java/i
+        var reg2 = /java$/
+        console.log(reg1.test(str1))
+        console.log(reg2.test(str2))
+
+        /* 校验用户名是否合法
+        * 1 必须是以字母开头
+        * 2 长度必须是6-10位
+        * 3 后面其他字符可以是大小写字母，数字和下划线
+        * */
+        var str = 'a496gy'
+        var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,9}$/
+
+        console.log(reg.test(str))
+
+        /*
+        * ### 常用正则表达式
+        需求                      正则表达式
+        用户名         /^[a-zA-Z ][a-zA-Z-0-9]{5,9}$/
+        密码           /^[a-zA-Z0-9 _-@#& *]{6,12}$/
+        前后空格        /^\s+|\s+$/g
+        电子邮箱        /^[a-zA-Z0-9 _.-]+@([a-zA-Z0-9-]+[.]{1})+[a-zA-Z]+$/
+        * */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

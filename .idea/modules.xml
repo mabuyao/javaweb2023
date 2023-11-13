@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ch01_start/ch01_start.iml" filepath="$PROJECT_DIR$/ch01_start/ch01_start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch02_HTML_CSS/ch02_HTML_CSS.iml" filepath="$PROJECT_DIR$/ch02_HTML_CSS/ch02_HTML_CSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch03_JavaScript/ch03_JavaScript.iml" filepath="$PROJECT_DIR$/ch03_JavaScript/ch03_JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04_XML_Tomcat10_HTTP/ch04_XML_Tomcat10_HTTP.iml" filepath="$PROJECT_DIR$/ch04_XML_Tomcat10_HTTP/ch04_XML_Tomcat10_HTTP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch05_servlet/ch05_servlet.iml" filepath="$PROJECT_DIR$/ch05_servlet/ch05_servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06_session_filter_listener/ch06_session_filter_listener.iml" filepath="$PROJECT_DIR$/ch06_session_filter_listener/ch06_session_filter_listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch07_Frontend_engineering/ch07_Frontend_engineering.iml" filepath="$PROJECT_DIR$/ch07_Frontend_engineering/ch07_Frontend_engineering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo01_web01/demo01_web01.iml" filepath="$PROJECT_DIR$/demo01_web01/demo01_web01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo02_servletConfig_servletContext/demo02_servletConfig_servletContext.iml" filepath="$PROJECT_DIR$/demo02_servletConfig_servletContext/demo02_servletConfig_servletContext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb2023.iml" filepath="$PROJECT_DIR$/javaweb2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro01_schedule_system/pro01_schedule_system.iml" filepath="$PROJECT_DIR$/pro01_schedule_system/pro01_schedule_system.iml" />
+    </modules>
+  </component>
+</project>

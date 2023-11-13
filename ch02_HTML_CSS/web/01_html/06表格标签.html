@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+<!--
++ table标签 代表表格
+    + thead标签 代表表头 可以省略不写
+    + tbody标签 代表表体 可以省略不写
+    + tfoot标签 代表表尾  可以省略不写
+          + tr标签 代表一行
+          + td标签 代表行内的一格
+          + th标签 自带加粗和居中效果的td
+-->
+    <h3 style="text-align: center;">员工技能竞赛评分表</h3>
+    <table  border="1px" style="width: 400px; margin: 0px auto;">
+      <tr>
+        <th>排名</th>
+        <th>姓名</th>
+        <th>分数</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>张小明</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>李小东</td></td>
+        <td>99</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>王小虎</td>
+        <td>98</td>
+      </tr>
+    </table>
+
+<!--
+通过td的rowspan属性实现上下跨行
+-->
+
+    <h3 style="text-align: center;">员工技能竞赛评分表</h3>
+    <table  border="1px" style="width: 400px; margin: 0px auto;">
+        <tr>
+            <th>排名</th>
+            <th>姓名</th>
+            <th>分数</th>
+            <th>备注</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>张小明</td>
+            <td>100</td>
+            <td rowspan="3">
+                前三名升职加薪
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>李小东</td></td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>王小虎</td>
+            <td>98</td>
+        </tr>
+    </table>
+
+<!--
+通过td的colspan属性实现左右的跨列
+-->
+
+    <h3 style="text-align: center;">员工技能竞赛评分表</h3>
+    <table  border="1px" style="width: 400px; margin: 0px auto;">
+        <tr>
+            <th>排名</th>
+            <th>姓名</th>
+            <th>分数</th>
+            <th>备注</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>张小明</td>
+            <td>100</td>
+            <td rowspan="6">
+                前三名升职加薪
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>李小东</td></td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>王小虎</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>总人数</td>
+            <td colspan="2">2000</td>
+        </tr>
+        <tr>
+            <td>平均分</td>
+            <td colspan="2">90</td>
+        </tr>
+        <tr>
+            <td>及格率</td>
+            <td colspan="2">80%</td>
+        </tr>
+    </table>
+</body>
+</html>

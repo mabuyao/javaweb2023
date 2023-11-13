@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsBOM编程常见的API</title>
+    <script>
+        function testAlert(){
+            //普通信息提示框
+            window.alert("提示信息");
+        }
+        function testConfirm(){
+            //确认框
+            var con =confirm("确定要删除吗?");
+            if(con){
+                alert("点击了确定")
+            }else{
+                alert("点击了取消")
+            }
+        }
+        function testPrompt(){
+            //信息输入对话框
+            var res =prompt("请输入昵称","例如:张三");
+            alert("您输入的是:"+res)
+        }
+        function goBaidu(){
+            var flag =confirm("即将跳转到百度官网,本页信息即将丢失,确定吗?")
+            if(flag){
+                // 通过BOM编程地址栏url切换
+                window.location.href="http://www.baidu.com"
+            }
+        }
+        /*
+        通过BOM编程实现会话级和持久级数据存储
+            + 会话级数据 : 内存型数据,是浏览器在内存上临时存储的数据,浏览器关闭后,数据失去,通过window的sessionStorge属性实现
+            + 持久级数据 : 磁盘型数据,是浏览器在磁盘上持久存储的数据,浏览器关闭后,数据仍在,通过window的localStorge实现
+            + 可以用于将来存储一些服务端响应回来的数据,比如:token令牌,或者一些其他功能数据,根据数据的业务范围我们可以选择数据存储的会话/持久 级别
+        * */
+        function saveItem(){
+            // 让浏览器存储一些会话级数据
+            window.sessionStorage.setItem("sessionMsg","sessionValue")
+            // 让浏览器存储一些持久级数据
+            window.localStorage.setItem("localMsg","localValue")
+
+            console.log("数据已保存")
+        }
+
+        function removeItem(){
+            // 删除数据
+            sessionStorage.removeItem("sessionMsg")
+            localStorage.removeItem("localMsg")
+        }
+
+        function readItem(){
+            console.log("read")
+            // 读取数据
+            console.log("session:"+sessionStorage.getItem("sessionMsg"))
+            console.log("local:"+localStorage.getItem("localMsg"))
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="提示框" onclick="testAlert()"/> <br>
+    <input type="button" value="确认框" onclick="testConfirm()"/> <br>
+    <input type="button" value="对话框" onclick="testPrompt()"/> <br>
+    <input type="button" value="跳转到百度" onclick="goBaidu()"/> <br>
+
+    <button onclick="saveItem()">存储数据</button>
+    <button onclick="removeItem()">删除数据</button>
+    <button onclick="readItem()">读取数据</button>
+</body>
+</html>

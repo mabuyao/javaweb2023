@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsDOM编程处理事件</title>
+    <script>
+        // 页面加载完毕事件,浏览器加载完整个文档行为
+        window.onload=function(){
+            var in1 =document.getElementById("in1");
+            // 通过DOM编程绑定事件
+            in1.onchange=testChange
+
+            var div1 = document.getElementById("d1")
+            div1.onclick = function (){
+                div1.style.backgroundColor = "red"
+            }
+
+            var btn1 =document.getElementById("btn1"); //通过id获取一个元素对象
+            btn1.onclick=function (){
+                console.log("按钮点击了")
+                // 调用事件方法触发事件
+                in1.onchange()
+                div1.onclick()
+            }
+        }
+        function testChange(){
+            console.log("内容改变")
+            console.log(event.target.value);
+        }
+    </script>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" id="d1"></div>
+    <br>
+    <input id="in1" type="text" />
+    <br>
+    <button id="btn1">按钮</button>
+</body>
+</html>

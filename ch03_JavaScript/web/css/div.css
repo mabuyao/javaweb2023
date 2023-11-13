@@ -1,0 +1,33 @@
+.outerDiv {
+    width: 800px;
+    height: 300px;
+    border: 1px solid green;
+    background-color: rgb(230, 224, 224);
+    margin: 0px auto;
+}
+.innerDiv{
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+    float: left;
+    /* margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px; */
+    margin: 10px 20px 30px 40px;
+
+}
+.d1{
+    background-color: greenyellow;
+    /* padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px; */
+    padding: 10px 20px 30px 40px;
+}
+.d2{
+    background-color: rgb(79, 230, 124);
+}
+.d3{
+    background-color: rgb(26, 165, 208);
+}

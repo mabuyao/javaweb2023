@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+> 表单标签,可以实现让用户在界面上输入各种信息并提交的一种标签. 是向服务端发送数据主要的方式之一
+
++ form标签,表单标签,其内部用于定义可以让用户输入信息的表单项标签
+  + action, form标签的属性之一,用于定义信息提交的服务器的地址
+  + method, form标签的属性之一,用于定义信息的提交方式
+    + get   get方式, 数据会缀到url后,以?作为参数开始的标识,多个参数用&隔开
+    + post  post方式,数据会通过请求体发送,不会在缀到url后
+
++ input标签,主要的表单项标签,可以用于定义表单项
+  + name, input标签的属性之一,用于定义提交的参数名
+  + type, input标签的属性之一,用于定义表单项类型
+    + text   文本框
+    + password 密码框
+    + radio 单选框 多个选项选其一
+        + name属性相同的radio为一组，组内互斥
+        + 当用户选择了一个radio并提交表单，这个radio的name属性和value属性组成一个键值对发送给服务器
+        + 设置checked="checked"属性设置默认被选中的radio
+        + 如果属性名和属性值一样的话，可以省略属性值，只写checked即可
+    + checkbox 复选框 多个选项选多个
+        + 下拉列表用到了两种标签，其中select标签用来定义下拉列表，而option标签设置列表项。
+        + name属性在select标签中设置,value属性在option标签中设置。
+        + option标签的标签体是显示出来给用户看的，提交到服务器的是value属性的值。
+        + 通过在option标签中设置selected="selected"属性实现默认选中的效果。
+    + hidden 隐藏域 不会在页面上显示 提交时会携带
+        通过表单隐藏域设置的表单项不会显示到页面上，用户看不到。但是提交表单时会一起被提交。
+        用来设置一些需要和表单一起提交但是不希望用户看到的数据，例如：用户id等等。
+    + 普通按钮: 点击后无效果，需要通过JavaScript绑定单击响应函数
+    + 重置按钮: 点击后将表单内的所有表单项都恢复为默认值
+    + 提交按钮: 点击后提交表单
+    + submit 提交按钮
+    + reset    重置按钮
+-->
+    <form action="08welcome.html" method="get">
+        用户名： <input type="text" name="username" /> <br>
+        密&nbsp;&nbsp;&nbsp;码： <input type="password" name="password" />
+        <br>
+        你的性别是：
+        <input type="radio" name="sex" value="male" />男
+        <input type="radio" name="sex" value="female" checked="checked" />女
+        <br>
+        你喜欢的球队是：
+        <input type="checkbox" name="team" value="Brazil"/>巴西
+        <input type="checkbox" name="team" value="German" checked/>德国
+        <input type="checkbox" name="team" value="France"/>法国
+        <input type="checkbox" name="team" value="China" checked="checked"/>中国
+        <input type="checkbox" name="team" value="Italian"/>意大利
+        <br>
+        你喜欢的运动是：
+        <select name="interesting">
+            <option value="swimming">游泳</option>
+            <option value="running">跑步</option>
+            <option value="shooting" selected="selected">射击</option>
+            <option value="skating">溜冰</option>
+        </select>
+        <br>
+        <button type="button">普通按钮</button>或<input type="button" value="普通按钮"/>
+        <button type="reset">重置按钮</button>或<input type="reset" value="重置按钮"/>
+        <button type="submit">提交按钮</button>或<input type="submit" value="提交按钮"/>
+        <br>
+        <input type="hidden" name="userId" value="2233"/>
+        <br>
+        自我介绍：<textarea name="desc" style="width: 300px; height: 100px;"></textarea>
+        <br>
+        头像:<input type="file" name="file"/>
+    </form>
+</body>
+</html>

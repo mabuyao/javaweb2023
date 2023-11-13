@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js循环结构</title>
+    <script>
+        document.write("<h1>99乘法表</h1>")
+        /* 打印99 乘法表 */
+        var i = 1;
+        while(i <= 9){
+            var j = 1;
+            while(j <= i){
+              document.write(j+"*"+i+"="+i*j+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+              j++;
+            }
+            document.write("<hr/>");
+            i++;
+        }
+
+        /* 打印99 乘法表 */
+        for(  var i = 1;i <= 9; i++){
+          for(var j = 1;j <= i;j++){
+            document.write(j+"*"+i+"="+i*j+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+          }
+          document.write("<hr/>");
+        }
+    </script>
+    <!--
+    > foreach循环
+        + 迭代数组时,和java不一样
+        + 括号中的临时变量表示的是元素的索引,不是元素的值,
+        + ()中也不在使用: 分隔,而是使用 in 关键字
+    -->
+    <script>
+        var cities =["北京","上海","深圳","武汉","西安","成都"]
+        document.write("<ul>")
+        for(var index in  cities){
+          document.write("<li>"+cities[index]+"</li>")
+        }
+        document.write("</ul>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

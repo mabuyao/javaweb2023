@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js常见事件演示</title>
+    <script>
+        /*
+        * 说明
+            + 通过事件属性绑定函数,在行为发生时会自动执行函数
+            + 一个事件可以同时绑定多个函数
+            + 一个元素可以同时绑定多个事件
+            + 方法中可以传入 this对象,代表当前元素
+        * */
+        function fun1(){
+            alert("单机了")
+        }
+        function testDown1(){
+            console.log("down1")
+        }
+        function testDown2(){
+            console.log("down2")
+        }
+        function testFocus(){
+            console.log("获得焦点")
+        }
+
+        function testBlur(){
+            console.log("失去焦点")
+        }
+        function testChange(value){
+            console.log("内容改变")
+            console.log(value);
+        }
+        function testChange2(value){
+            console.log("选项改变为：" + value)
+        }
+        function testMouseOver(){
+            console.log("鼠标悬停")
+        }
+        function testMouseLeave(){
+            console.log("鼠标离开")
+        }
+        function testMouseMove(){
+            console.log("鼠标移动")
+        }
+        function testSubmit(){
+            /*
+            * 弹窗的三种方式
+            * alert()信息提示框
+            * prompt()信息输入框
+            * confirm()信息确认框
+            * */
+            var flag = confirm("确定要提交表单么？")
+            if(!flag){
+                //在这里有机会阻止表单的提交
+                event.preventDefault();//阻止组件的默认行为
+            }
+        }
+
+        function testReset(){
+            var flag = confirm("确定要重置表单么？")
+            if(!flag){
+                //在这里有机会阻止表单的提交
+                return false//阻止组件的默认行为
+            }
+            return true
+        }
+    </script>
+</head>
+<body>
+    <form action="01js引入方式.html" method="get" onsubmit="testSubmit()" onreset="return testReset()">
+        用户昵称：<input type="text" name="realName"
+                        onfocus="testFocus()"
+                        onblur="testBlur()"
+                        onchange="testChange(this.value)"
+                > <br>
+        登录账号：<input type="text" name="loginName"> <br>
+        选择籍贯：
+            <select onchange="testChange2(this.value)">
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+            </select>
+        <br>
+        <input type="submit" value="注册">
+        <input type="reset" value="清空">
+    </form>
+    <hr>
+    <input type="button" value="按钮" onclick="fun1()">
+    <br>
+    <input type="text"
+           onkeydown="testDown1(),testDown2()"
+           onfocus="testFocus()"
+           onblur="testBlur()"
+           onchange="testChange(this)"
+           onmouseover="testMouseOver()"
+           onmouseleave="testMouseLeave()"
+           onmousemove="testMouseMove()"
+    />
+</body>
+</html>

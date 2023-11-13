@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    1.XML的基本语法和HTML的基本语法简直如出一辙。其实这不是偶然的，XML基本语法+HTML约束=HTML语法。在逻辑上HTML确实是XML的子集。
+    2.XML文档声明 这部分基本上就是固定格式，要注意的是文档声明一定要从第一行第一列开始写<?xml version="1.0" encoding="UTF-8"?>
+    3.根标签
+        根标签有且只能有一个。
+    4.标签关闭
+        双标签：开始标签和结束标签必须成对出现。
+        单标签：单标签在标签内关闭。
+    5.标签嵌套
+        可以嵌套，但是不能交叉嵌套。
+    6.注释不能嵌套
+    7.标签名、属性名建议使用小写字母
+    8.属性
+        属性必须有值
+        属性值必须加引号，单双都行
+-->
+
+<jdbc>
+    <dev id="001">
+        <username>root</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/xiaoma</url>
+    </dev>
+    <test id="002">
+        <username>test</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/xiaoma</url>
+    </test>
+    <formal id="003">
+        <username>zhangsan</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/xiaoma</url>
+    </formal>
+</jdbc>
